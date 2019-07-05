@@ -555,10 +555,10 @@ class StageList extends React.Component {
 
 StageList.getInitialProps = async function(context) {
   const { id } = context.query;
-  // const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
-  // const show = await res.json();
+  const res = await fetch(`https://raw.githubusercontent.com/JoshMontech/stagelists/master/${id}.json`);
+  const metadata = await res.json();
 
-  const metadata = await import(`../mockapi/${id}.json`);
+  // const metadata = await import(`../mockapi/${id}.json`);
 
   // console.log(`Fetched show: ${show.name}`);
   console.log(`Fetched mock: ${metadata.id}`);
