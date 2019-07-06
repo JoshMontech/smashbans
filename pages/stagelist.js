@@ -553,17 +553,28 @@ class StageList extends React.Component {
   }
 }
 
-// StageList.getInitialProps = async function(context) {
+StageList.getInitialProps = async function(context) {
+  const { id } = context.query;
+  // console.log(id);
+  const res = await fetch(`https://raw.githubusercontent.com/JoshMontech/stagelists/master/${id}.json`);
+  const metadata = await res.json();
+
+  // const metadata = await import(`../mockapi/${id}.json`);
+  // console.log(`Fetched show: ${show.name}`);
+  console.log(`Fetched mock: ${metadata.id}`);
+
+  return { metadata };
+};
+
+// Post.getInitialProps = async function(context) {
 //   const { id } = context.query;
-//   console.log(id);
-//   // const res = await fetch(`https://raw.githubusercontent.com/JoshMontech/stagelists/master/${id}.json`);
-//   // const metadata = await res.json();
+//   const res = await fetch(`https://api.tvmaze.com/shows/${id}`);
+//   const show = await res.json();
 
-//   // // const metadata = await import(`../mockapi/${id}.json`);
-//   // // console.log(`Fetched show: ${show.name}`);
-//   // console.log(`Fetched mock: ${metadata.id}`);
+//   console.log(`Fetched show: ${show.name}`);
 
-//   // return { metadata };
+//   return { show };
 // };
+
 
 export default StageList;

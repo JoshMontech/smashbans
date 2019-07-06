@@ -4,28 +4,26 @@ import fetch from 'isomorphic-unfetch';
 
 const Index = props => (
   <Layout>
-    {/* <h1>Batman TV Shows</h1>
+    <h1>Batman TV Shows</h1>
     <ul>
-      {props.shows.map(show => (
-        <li key={show.id}>
-          <Link as={`/stagelist/${show.id}`} href={`/stagelist?id=${show.id}`}>
-            <a>{show.name}</a>
+      {props.stagelists.map(stagelist => (
+        <li key={stagelist}>
+          <Link as={`/stagelist/${stagelist}`} href={`/stagelist?id=${stagelist}`}>
+            <a>{stagelist}</a>
           </Link>
         </li>
       ))}
-    </ul> */}
+    </ul>
   </Layout>
 );
 
-// Index.getInitialProps = async function() {
-//   // const res = await fetch('https://api.tvmaze.com/search/shows?q=batman');
-//   // const data = await res.json();
+Index.getInitialProps = async function() {
+  const res = await fetch('https://raw.githubusercontent.com/JoshMontech/stagelists/master/stagelists.json');
+  const data = await res.json();
 
-//   // console.log(`Show data fetched. Count: ${data.length}`);
-
-//   // return {
-//   //   shows: data.map(entry => entry.show)
-//   // };
-// };
+  // console.log(`Show data fetched. Count: ${data.length}`);
+  const stagelists = data.stages;
+  return { stagelists };
+};
 
 export default Index;

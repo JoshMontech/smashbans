@@ -1,0 +1,3 @@
+odule.exports = {
+  target: 'serverless'
+};
