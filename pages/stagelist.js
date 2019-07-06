@@ -1,12 +1,12 @@
-// import Layout from '../components/MyLayout';
-// import fetch from 'isomorphic-unfetch';
-// import StageHeader from '../components/StageHeader';
-// import StagesContainer from '../components/stages/StagesContainer';
-// import ReportingModal from '../components/ReportingModal';
-// import CompletionModal from '../components/CompletionModal';
-// import SimpleSnackbar from '../src/SimpleSnackbar';
-// import Dashboard from '../components/Dashboard';
-// import ConfirmationModal from '../components/ConfirmationModal';
+import Layout from '../components/MyLayout';
+import fetch from 'isomorphic-unfetch';
+import StageHeader from '../components/StageHeader';
+import StagesContainer from '../components/stages/StagesContainer';
+import ReportingModal from '../components/ReportingModal';
+import CompletionModal from '../components/CompletionModal';
+import SimpleSnackbar from '../src/SimpleSnackbar';
+import Dashboard from '../components/Dashboard';
+import ConfirmationModal from '../components/ConfirmationModal';
 
 const INITIAL_STATE = {
   roundsComplete: 0,
@@ -38,7 +38,7 @@ class StageList extends React.Component {
 
     // initial state
     this.state = {
-      stages: this.props.metadata.stages,
+      // stages: this.props.metadata.stages,
       displaySnackbar: INITIAL_STATE.displaySnackbar,
       snackbarMessage: INITIAL_STATE.snackbarMessage,
       roundsComplete: INITIAL_STATE.roundsComplete,
@@ -53,8 +53,8 @@ class StageList extends React.Component {
     };
 
     // create new instance of state
-    this.history = [JSON.parse(JSON.stringify(this.state))];
-    this.revertHistoryFlag = false;
+    // this.history = [JSON.parse(JSON.stringify(this.state))];
+    // this.revertHistoryFlag = false;
   }
 
   // componentDidUpdate(prevProps, prevState) {
@@ -555,14 +555,15 @@ class StageList extends React.Component {
 
 // StageList.getInitialProps = async function(context) {
 //   const { id } = context.query;
-//   const res = await fetch(`https://raw.githubusercontent.com/JoshMontech/stagelists/master/${id}.json`);
-//   const metadata = await res.json();
+//   console.log(id);
+//   // const res = await fetch(`https://raw.githubusercontent.com/JoshMontech/stagelists/master/${id}.json`);
+//   // const metadata = await res.json();
 
-//   // const metadata = await import(`../mockapi/${id}.json`);
-//   // console.log(`Fetched show: ${show.name}`);
-//   console.log(`Fetched mock: ${metadata.id}`);
+//   // // const metadata = await import(`../mockapi/${id}.json`);
+//   // // console.log(`Fetched show: ${show.name}`);
+//   // console.log(`Fetched mock: ${metadata.id}`);
 
-//   return { metadata };
+//   // return { metadata };
 // };
 
 export default StageList;
