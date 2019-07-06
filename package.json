@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "node server.js",
     "build": "next build",
-    "now-build": "next build",
-    "start": "npm start -p $PORT"
+    "start": "npm start"
   },
   "keywords": [],
   "author": "",
