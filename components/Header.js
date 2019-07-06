@@ -13,6 +13,9 @@ export default function Header() {
       <Link href="/about">
         <a style={linkStyle}>About</a>
       </Link>
+      <Link href="/stagelist/ATX_Cityscape">
+        <a style={linkStyle}>Stagelist</a>
+      </Link>
     </div>
   );
 }

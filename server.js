@@ -10,16 +10,15 @@ app
   .then(() => {
     const server = express()
 
-    server.get('/stagelist/:id', (req, res) => {
-      const actualPage = '/stagelist';
-      const queryParams = { id: req.params.id };
-      app.render(req, res, actualPage, queryParams);
-    });
+    // server.get('/stagelist/:id', (req, res) => {
+    //   const actualPage = '/stagelist';
+    //   const queryParams = { id: req.params.id };
+    //   app.render(req, res, actualPage, queryParams);
+    // });
 
     server.get('*', (req, res) => {
       return handle(req, res)
     })
-
     server.listen(3000, err => {
       if (err) throw err
       console.log('> Ready on http://localhost:3000')
