@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "alias": "smashbans.com", 
+  "alias": ["smashbans.com", "www.smashbans.com"], 
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
     {"src": "/s/(?<id>[^/]+)$", "dest": "/stagelist?id=$id"}
