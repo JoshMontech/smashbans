@@ -1,6 +1,6 @@
 {
-  "id": "cityscape",
-  "name": "Cityscape",
+  "id": "bell",
+  "name": "Bell",
   "startingBans": [true,false,false,true],
   "counterpickBans": 3,
   "firstTo": 2,
