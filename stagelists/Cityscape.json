@@ -2,7 +2,7 @@
   "id": "cityscape",
   "name": "Cityscape",
   "startingBans": [true,false,false,true],
-  "counterpickBans": 3,
+  "counterpickBans": 2,
   "firstTo": 2,
   "colors": { "primary": "#123123", "secondary": "#DDD"},
   "backgroundImg": "",
