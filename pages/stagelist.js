@@ -482,6 +482,10 @@ class StageList extends React.Component {
     });
   }
 
+  capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   render() {
     const selectionPhase = this.isBanPhase() ? 'Ban' : 'Stage';
     const playerColor = this.state.p1Turn ? '#ff1a1c' : '#4c80ff';
@@ -554,7 +558,8 @@ class StageList extends React.Component {
 }
 
 StageList.getInitialProps = async function(context) {
-  const { id } = context.query;
+  let { id } = context.query;
+  id = id.charAt(0).toUpperCase() + string.slice(1);
   // console.log(id);
   const res = await fetch(`https://raw.githubusercontent.com/JoshMontech/smashbans/master/stagelists/${id}.json`);
   const metadata = await res.json();
