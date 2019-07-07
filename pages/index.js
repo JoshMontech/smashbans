@@ -22,7 +22,7 @@ Index.getInitialProps = async function() {
   const data = await res.json();
 
   // console.log(`Show data fetched. Count: ${data.length}`);
-  const stagelists = data.stages;
+  const stagelists = data.stagelists;
   return { stagelists };
 };
 
