@@ -18,7 +18,7 @@ const Index = props => (
 );
 
 Index.getInitialProps = async function() {
-  const res = await fetch('https://raw.githubusercontent.com/JoshMontech/stagelists/master/stagelists.json');
+  const res = await fetch('https://raw.githubusercontent.com/JoshMontech/smashbans/master/stagelists/stagelists.json');
   const data = await res.json();
 
   // console.log(`Show data fetched. Count: ${data.length}`);
