@@ -3,6 +3,6 @@
   "alias": "smashbans.com", 
   "builds": [{ "src": "package.json", "use": "@now/next" }],
   "routes": [
-    {"src": "/stagelist/(?<id>[^/]+)$", "dest": "/stagelist?id=$id"}
+    {"src": "/s/(?<id>[^/]+)$", "dest": "/stagelist?id=$id"}
   ]
 }

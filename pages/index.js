@@ -8,7 +8,7 @@ const Index = props => (
     <ul>
       {props.stagelists.map(stagelist => (
         <li key={stagelist}>
-          <Link as={`/stagelist/${stagelist}`} href={`/stagelist?id=${stagelist}`}>
+          <Link as={`/s/${stagelist}`} href={`/stagelist?id=${stagelist}`}>
             <a>{stagelist}</a>
           </Link>
         </li>
