@@ -3,7 +3,7 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 
 const Index = props => (
-  <Layout>
+  <Layout title={'Home'}>
     <h1>Smash Ultimate Stagelists</h1>
     <ul>
       {props.stagelists.map(stagelist => (
